@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Göz Takibi Egzersizi</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      margin: 0;
+      padding: 50px;
+    }
+    h1 {
+      color: #0d6efd;
+    }
+    #tracker {
+      font-size: 60px;
+      margin: 50px auto;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      border: 2px dashed #0d6efd;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Göz Takibi Egzersizi</h1>
+  <p>Okları gözünle takip et!</p>
+  <div id="tracker">⬅️</div>
+
+  <script>
+    const arrows = ["⬅️", "➡️", "⬆️", "⬇️"];
+    const tracker = document.getElementById("tracker");
+
+    function updateArrow() {
+      const random = Math.floor(Math.random() * arrows.length);
+      tracker.textContent = arrows[random];
+    }
+
+    setInterval(updateArrow, 1000);
+  </script>
+</body>
+</html>
